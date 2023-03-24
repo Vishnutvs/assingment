@@ -1,0 +1,14 @@
+Point out the error in the following program.
+#include<stdio.h>
+struct emp
+{
+    char name[20];
+    int age;
+};
+int main()
+{
+    emp int xx;
+    int a;
+    printf("%d\n", &a);
+    return 0;
+}
