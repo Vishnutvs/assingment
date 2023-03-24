@@ -1,0 +1,27 @@
+def print_even_odd(lower, upper, is_even=True):
+    # Base case: lower and upper limits are equal
+    if lower == upper:
+        # Check if the lower limit is even or odd
+        if (lower % 2 == 0) == is_even:
+            print(lower, end=", ")
+        return
+    
+    # Recursive case: lower limit is less than upper limit
+    if (lower % 2 == 0) == is_even:
+        print(lower, end=", ")
+    
+    print_even_odd(lower + 1, upper, is_even)
+
+# Example usage:
+lower = int(input("Enter the lower limit: "))
+upper = int(input("Enter the upper limit: "))
+
+print("Even/odd numbers from", lower, "to", upper, "are:", end=" ")
+print_even_odd(lower, upper)
+oEnter the lower limit: 1
+Enter the upper limit: 10
+Even/odd numbers from 1 to 10 are: 1, 3, 5, 7, 9, 
+utput
+Enter the lower limit: 2
+Enter the upper limit: 10
+Even/odd numbers from 2 to 10 are: 2, 4, 6, 8, 10, 
